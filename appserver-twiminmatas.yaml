@@ -1,0 +1,26 @@
+# appserver-twiminmatas.yaml
+
+# don't forget to set the corresponding entry in homeserver.yaml in /etc/matrix-synapse/:
+#    |  app_service_config_files:
+#    |       - "/etc/matrix-synapse/appserver-twiminmatas.yaml"
+# and restart synapse
+
+# An ID which is unique across all application services on your homeserver. This should never be changed once set.
+id: "testroom-twiminmatas"
+# this is the base URL of the application service. TODO: adjust to your needs (see startTunnelToMatrix()...)
+url: "http://127.0.01:8111"
+# This is the token that the AS should use as its access_token when using the Client-Server API
+# This can be anything you want. TODO: change default!
+as_token: abcdefghijklmnopqrstuvwxyz
+# This is the token that the HS will use when sending requests to the AS.
+# This can be anything you want. TODO: change default!
+hs_token: 0123456789ABCDEFGHIJKLMN
+# this is the local part of the desired user ID for this AS (in this case @tester:localhost)
+sender_localpart: tester
+namespaces:
+      users: []
+      rooms: []
+      aliases:
+        - exclusive: true
+          regex: "#test_.*"
+
