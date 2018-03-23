@@ -1,6 +1,6 @@
 # MinimalMatrixAppServer
 
-Implementation of the example from the matrix.org web site using the twisted framewark.
+Implementation of the example from the matrix.org web site using the twisted framework.
 (if you installed the matrix-synapse server you have the twisted framework installed already...):
 * TwistedMinimalMatrixAppicationServer.py
 * appserver-twiminmatas.yaml (example config file for this app server)
